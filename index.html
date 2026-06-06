@@ -1,647 +1,148 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anil Pharande – Founder, Pharande Spaces</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Anil Pharande</title>
+    <meta name="description" content="Discover the inspiring journey of Anil Pharande, Founder of Pharande Spaces and a visionary leader shaping Pune & PCMC’s real estate landscape.">
+    <meta name="keywords" content="anil pharande, pharande spaces, pune real estate, integrated townships, urban development">
+    <link rel="canonical" href="https://anilpharande.netlify.app/" />
+    <meta name="google-site-verification" content="jk7QviYe-voAy7ehe5WKKR9HSiPTSH1ThGp1pDdtpDg" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 8;
+            padding: ;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-  :root {
-    --brand: #009ADD;
-    --brand-dark: #007ab5;
-    --brand-light: #e5f5ff;
-    --white: #ffffff;
-    --off-white: #f7fbff;
-    --text-dark: #0d1b2a;
-    --text-mid: #3a5068;
-    --text-light: #6b8ba4;
-    --border: #cce8f6;
-  }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-  html { scroll-behavior: smooth; }
+        .profile-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            border: 3px solid #007BFF;
+        }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--white);
-    color: var(--text-dark);
-    overflow-x: hidden;
-  }
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #007BFF;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 60px;
-    background: rgba(255,255,255,0.96);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(8px);
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px; font-weight: 700;
-    color: var(--brand);
-    letter-spacing: 0.04em;
-  }
-  .nav-logo span { color: var(--text-dark); }
-  .nav-links { display: flex; gap: 36px; list-style: none; }
-  .nav-links a {
-    text-decoration: none; font-size: 14px; font-weight: 400;
-    color: var(--text-mid); letter-spacing: 0.03em;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--brand); }
-  .nav-cta {
-    background: var(--brand); color: white;
-    border: none; padding: 10px 24px;
-    border-radius: 4px; font-size: 14px; font-weight: 500;
-    cursor: pointer; text-decoration: none;
-    transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--brand-dark); }
+        .profile-card img:hover {
+            transform: scale(1.1);
+        }
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 80px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; top: 0; right: 0;
-    width: 55%; height: 100%;
-    background: var(--off-white);
-    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
-    z-index: 0;
-  }
+        .profile-card h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #007BFF;
+        }
 
-  .hero-left {
-    position: relative; z-index: 1;
-    display: flex; flex-direction: column; justify-content: center;
-    padding: 80px 60px 80px 80px;
-  }
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--brand-light); color: var(--brand);
-    font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; padding: 6px 14px; border-radius: 2px;
-    margin-bottom: 28px; width: fit-content;
-  }
-  .hero-tag::before {
-    content: ''; width: 6px; height: 6px;
-    background: var(--brand); border-radius: 50%;
-  }
-  .hero-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(52px, 5vw, 72px);
-    font-weight: 700; line-height: 1.05;
-    color: var(--text-dark);
-    margin-bottom: 8px;
-  }
-  .hero-name span { color: var(--brand); }
-  .hero-title {
-    font-size: 16px; font-weight: 300; color: var(--text-light);
-    letter-spacing: 0.08em; text-transform: uppercase;
-    margin-bottom: 28px;
-  }
-  .hero-divider {
-    width: 48px; height: 3px; background: var(--brand);
-    margin-bottom: 28px; border-radius: 2px;
-  }
-  .hero-desc {
-    font-size: 16px; line-height: 1.75; color: var(--text-mid);
-    max-width: 420px; margin-bottom: 44px;
-  }
-  .hero-stats {
-    display: flex; gap: 40px; margin-bottom: 44px;
-  }
-  .stat-item { display: flex; flex-direction: column; gap: 4px; }
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px; font-weight: 700; color: var(--brand); line-height: 1;
-  }
-  .stat-label { font-size: 12px; color: var(--text-light); letter-spacing: 0.06em; text-transform: uppercase; }
-  .hero-btns { display: flex; gap: 16px; }
-  .btn-primary {
-    background: var(--brand); color: white;
-    padding: 14px 32px; border-radius: 4px;
-    font-size: 15px; font-weight: 500;
-    text-decoration: none; transition: background 0.2s;
-    border: 2px solid var(--brand);
-  }
-  .btn-primary:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
-  .btn-outline {
-    background: transparent; color: var(--brand);
-    padding: 14px 32px; border-radius: 4px;
-    font-size: 15px; font-weight: 500;
-    text-decoration: none; border: 2px solid var(--brand);
-    transition: all 0.2s;
-  }
-  .btn-outline:hover { background: var(--brand-light); }
+        .profile-card p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
 
-  .hero-right {
-    position: relative; z-index: 1;
-    display: flex; align-items: flex-end; justify-content: center;
-    padding: 40px 60px 0 40px;
-  }
-  .hero-img-wrap {
-    position: relative;
-    width: 420px; max-width: 100%;
-  }
-  .hero-img-wrap::before {
-    content: '';
-    position: absolute; top: 32px; left: 32px; right: -16px; bottom: -16px;
-    border: 2px solid var(--brand);
-    border-radius: 4px;
-    z-index: 0;
-  }
-  .hero-img-wrap img {
-    position: relative; z-index: 1;
-    width: 100%; border-radius: 4px;
-    display: block;
-    object-fit: cover;
-  }
-  .hero-badge {
-    position: absolute; bottom: 48px; left: -32px; z-index: 2;
-    background: white; border: 1px solid var(--border);
-    border-radius: 6px; padding: 14px 20px;
-    box-shadow: 0 8px 32px rgba(0,154,221,0.12);
-    min-width: 180px;
-  }
-  .hero-badge .badge-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px; font-weight: 700; color: var(--brand);
-  }
-  .hero-badge .badge-text { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-  /* ABOUT */
-  .section { padding: 100px 80px; }
-  .section-tag {
-    font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--brand);
-    margin-bottom: 16px;
-  }
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 3.5vw, 50px); font-weight: 700;
-    line-height: 1.15; color: var(--text-dark);
-    margin-bottom: 20px;
-  }
-  .section-title span { color: var(--brand); }
-  .section-divider { width: 40px; height: 3px; background: var(--brand); margin-bottom: 24px; }
+        .button:hover {
+            background-color: #0056b3;
+        }
 
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 80px; align-items: start; margin-top: 60px;
-  }
-  .about-text p {
-    font-size: 16px; line-height: 1.8; color: var(--text-mid); margin-bottom: 20px;
-  }
-  .about-highlights { display: flex; flex-direction: column; gap: 20px; }
-  .highlight-card {
-    background: var(--off-white); border-left: 4px solid var(--brand);
-    padding: 20px 24px; border-radius: 0 6px 6px 0;
-  }
-  .highlight-card h4 {
-    font-size: 15px; font-weight: 500; color: var(--text-dark); margin-bottom: 6px;
-  }
-  .highlight-card p { font-size: 14px; line-height: 1.6; color: var(--text-mid); }
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        p {
+    text-align: justify;
+}
 
-  /* JOURNEY */
-  .journey-section { background: var(--text-dark); padding: 100px 80px; }
-  .journey-section .section-tag { color: var(--brand); }
-  .journey-section .section-title { color: white; }
-  .journey-section .section-title span { color: var(--brand); }
-  .timeline { margin-top: 60px; position: relative; }
-  .timeline::before {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 2px; background: var(--brand);
-  }
-  .timeline-item {
-    padding-left: 40px; margin-bottom: 48px; position: relative;
-  }
-  .timeline-item::before {
-    content: ''; position: absolute; left: -6px; top: 4px;
-    width: 14px; height: 14px; border-radius: 50%;
-    background: var(--brand); border: 3px solid var(--text-dark);
-  }
-  .timeline-year {
-    font-size: 12px; font-weight: 500; color: var(--brand);
-    letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px;
-  }
-  .timeline-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px; font-weight: 600; color: white; margin-bottom: 8px;
-  }
-  .timeline-text { font-size: 15px; line-height: 1.7; color: #8ba4b8; max-width: 480px; }
+        .social-links a {
+            display: flex;
+            justify-content: bottom;
+            align-items: bottom;
+            width: 50px;
+            height: 50px;
+            background-color: #f4f4f4;
+            border-radius: 50%;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.s ease;
+        }
 
-  /* LEADERSHIP */
-  .leadership-section { background: var(--white); }
-  .leadership-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 24px; margin-top: 60px;
-  }
-  .leadership-card {
-    border: 1px solid var(--border);
-    border-radius: 8px; padding: 28px;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .leadership-card:hover { border-color: var(--brand); transform: translateY(-4px); }
-  .lc-icon {
-    width: 48px; height: 48px; border-radius: 6px;
-    background: var(--brand-light);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 16px;
-  }
-  .lc-icon svg { width: 24px; height: 24px; stroke: var(--brand); }
-  .leadership-card h3 {
-    font-size: 17px; font-weight: 500; color: var(--text-dark); margin-bottom: 10px;
-  }
-  .leadership-card p { font-size: 14px; line-height: 1.7; color: var(--text-mid); }
+        .social-links a:hover {
+            transform: scale(1.1);
+            background-color: #007BFF;
+        }
 
-  /* INSIGHTS */
-  .insights-section { background: var(--brand-light); padding: 100px 80px; }
-  .insights-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 60px; align-items: center; margin-top: 60px;
-  }
-  .insight-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px; font-weight: 500; line-height: 1.5;
-    color: var(--text-dark); position: relative;
-    padding-left: 28px;
-  }
-  .insight-quote::before {
-    content: '"'; position: absolute; left: 0; top: -8px;
-    font-size: 72px; font-weight: 700; color: var(--brand);
-    line-height: 1; font-family: 'Cormorant Garamond', serif;
-  }
-  .insight-points { display: flex; flex-direction: column; gap: 16px; }
-  .insight-point {
-    display: flex; gap: 14px; align-items: flex-start;
-  }
-  .ip-dot {
-    width: 8px; height: 8px; border-radius: 50%; background: var(--brand);
-    flex-shrink: 0; margin-top: 7px;
-  }
-  .insight-point p { font-size: 15px; line-height: 1.7; color: var(--text-mid); }
-
-  /* CTA BAND */
-  .cta-band {
-    background: var(--brand); padding: 80px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  .cta-band h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 40px; font-weight: 700; color: white; max-width: 520px;
-    line-height: 1.2;
-  }
-  .cta-band .btn-white {
-    background: white; color: var(--brand);
-    padding: 16px 40px; border-radius: 4px;
-    font-size: 15px; font-weight: 500;
-    text-decoration: none; white-space: nowrap;
-    border: 2px solid white; transition: all 0.2s; flex-shrink: 0;
-  }
-  .cta-band .btn-white:hover { background: transparent; color: white; }
-
-  /* FOOTER */
-  footer {
-    background: var(--text-dark); padding: 60px 80px 40px;
-  }
-  .footer-top {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; margin-bottom: 32px;
-  }
-  .footer-brand {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px; font-weight: 700; color: white;
-  }
-  .footer-brand span { color: var(--brand); }
-  .footer-brand p {
-    font-size: 14px; color: #6b8ba4; margin-top: 8px; max-width: 260px;
-    font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6;
-  }
-  .footer-links { display: flex; gap: 60px; }
-  .footer-col h5 {
-    font-size: 12px; font-weight: 500; color: var(--brand);
-    letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;
-  }
-  .footer-col ul { list-style: none; }
-  .footer-col ul li { margin-bottom: 10px; }
-  .footer-col ul li a {
-    font-size: 14px; color: #8ba4b8; text-decoration: none;
-    transition: color 0.2s;
-  }
-  .footer-col ul li a:hover { color: white; }
-  .footer-bottom {
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .footer-bottom p { font-size: 13px; color: #4a6070; }
-  .credai-badge {
-    background: rgba(0,154,221,0.12); border: 1px solid rgba(0,154,221,0.3);
-    color: var(--brand); padding: 6px 16px; border-radius: 4px;
-    font-size: 12px; font-weight: 500; letter-spacing: 0.06em;
-  }
-
-  @media (max-width: 900px) {
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero::before { display: none; }
-    .hero-left { padding: 40px 24px; }
-    .hero-right { display: none; }
-    .section, .journey-section, .insights-section, .leadership-section { padding: 60px 24px; }
-    .about-grid, .insights-grid { grid-template-columns: 1fr; gap: 40px; }
-    .leadership-grid { grid-template-columns: 1fr; }
-    .cta-band { flex-direction: column; gap: 32px; padding: 60px 24px; }
-    footer { padding: 40px 24px 24px; }
-    .footer-top { flex-direction: column; gap: 40px; }
-    .footer-links { flex-wrap: wrap; gap: 32px; }
-    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-  }
-</style>
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="profile-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY7L1JMZSKGKcRVI0I4fBssfv7lQBWY4iyBw&s" alt="Anil pharande" id="profile-pic">
+            <h1>Anil Pharande</h1>
+          <p><span style="font-weight: 400;">Anil Pharande, founder of <a href="https://pharandespaces.com/">Pharande Spaces</a>, is recognized as one of Pune & PCMC’s most respected real estate leaders and a visionary in modern urban development. With more than 30 years of experience in the real estate industry, he has played a significant role in transforming the Pimpri-Chinchwad region through premium residential communities, integrated townships, luxury villas, and commercial developments focused on quality living and future-ready infrastructure.</span></p>
+          
+<p><span style="font-weight: 400;">Starting his journey in 1994 with determination, vision, and a commitment toward quality construction, Anil Pharande identified the long-term growth potential of PCMC much before many major developers entered the market. At a time when the region was primarily known for affordable housing and industrial development, he believed that infrastructure growth, connectivity, and planned urban development would eventually transform PCMC into one of Pune’s leading real estate destinations. </span></p>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Anil <span>Pharande</span></div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#journey">Journey</a></li>
-    <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#insights">Insights</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Connect</a>
-</nav>
+<p><span style="font-weight: 400;">Under his leadership, Pharande Spaces gradually expanded from small residential projects into large-scale township developments and modern communities across locations including Punawale, Ravet, Moshi, Spine Road, Talegaon, and Urse. Landmark projects such as Vaarivana, Puneville, Vaanya, Kairosa, and L-axis reflect the company’s commitment toward integrated township living, modern architecture, premium amenities, and long-term value creation. </span></p>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <span class="hero-tag">Pharande Spaces — Est. 1994</span>
-    <h1 class="hero-name">Anil<br><span>Pharande</span></h1>
-    <p class="hero-title">Founder & Visionary Leader</p>
-    <div class="hero-divider"></div>
-    <p class="hero-desc">
-      A trusted name in Pune's real estate landscape with over 30 years of transforming urban spaces into thriving communities across Pune &amp; PCMC.
-    </p>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num">30+</span>
-        <span class="stat-label">Years of Legacy</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">1994</span>
-        <span class="stat-label">Founded</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-num">6+</span>
-        <span class="stat-label">Key Locations</span>
-      </div>
-    </div>
-    <div class="hero-btns">
-      <a href="#about" class="btn-primary">Explore Journey</a>
-      <a href="#insights" class="btn-outline">Market Insights</a>
-    </div>
-  </div>
+<p><span style="font-weight: 400;">Anil Pharande’s contribution extends beyond real estate development. As the former President of CREDAI Pune, he has actively participated in urban planning discussions, infrastructure initiatives, and industry development efforts focused on shaping a better and more connected Pune. His technical expertise, long-term vision, and customer-centric philosophy have helped Pharande Spaces establish itself as one of the trusted real estate brands in Pune & PCMC. </span></p>
 
-  <div class="hero-right">
-    <div class="hero-img-wrap">
-      <img src="/mnt/user-data/uploads/1618637501833.jfif" alt="Anil Pharande – Founder, Pharande Spaces" />
-      <div class="hero-badge">
-        <div class="badge-num">CREDAI</div>
-        <div class="badge-text">Ex-President, Pune</div>
-      </div>
-    </div>
-  </div>
-</section>
+<p><span style="font-weight: 400;">Known for his focus on infrastructure-led growth, Anil Pharande strongly believes that real estate should go beyond buildings and create better lifestyles, stronger communities, and sustainable urban environments. Several Pharande Spaces developments have delivered strong long-term appreciation and investment value, with many projects witnessing significant growth due to strategic location selection and future-focused planning. 
+</span></p>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-  <p class="section-tag">About</p>
-  <h2 class="section-title">Building Pune's<br><span>Future, One Project</span> at a Time</h2>
-  <div class="section-divider"></div>
+<p><span style="font-weight: 400;">Today, Anil Pharande continues to inspire the next generation of urban development through his leadership, innovation, and commitment toward quality construction. His journey reflects persistence, visionary thinking, and a dedication toward building future-ready communities that contribute positively to Pune & PCMC’s evolving real estate landscape.  
+</span></p>
 
-  <div class="about-grid">
-    <div class="about-text">
-      <p>
-        Anil Pharande is the founder of Pharande Spaces and one of the most respected names in Pune's real estate industry. With over 30 years of experience, he has played a significant role in shaping the residential and commercial landscape of Pune &amp; PCMC.
-      </p>
-      <p>
-        Known for his strong vision, technical expertise, and dedication to quality construction, Anil Pharande has helped Pharande Spaces establish itself as a trusted real estate brand since 1994. His contribution to urban development and modern infrastructure has made him a recognized figure across the industry.
-      </p>
-      <p>
-        Beyond building structures, his philosophy centers on creating communities — spaces that improve lifestyles, foster belonging, and contribute positively to the city's growth.
-      </p>
-    </div>
+            <a href="https://pharandespaces.com/management-team/" class="button">Learn More</a>
 
-    <div class="about-highlights">
-      <div class="highlight-card">
-        <h4>Quality Construction</h4>
-        <p>Every development under his leadership upholds the highest standards of construction quality, ensuring long-term value for homeowners.</p>
-      </div>
-      <div class="highlight-card">
-        <h4>Integrated Townships</h4>
-        <p>Pioneer in developing large-scale integrated communities combining premium amenities, green spaces, and excellent connectivity.</p>
-      </div>
-      <div class="highlight-card">
-        <h4>Customer Trust</h4>
-        <p>Decades of timely delivery and transparent practices have built unwavering trust among thousands of home buyers across Pune &amp; PCMC.</p>
-      </div>
-      <div class="highlight-card">
-        <h4>Industry Leadership</h4>
-        <p>Served as President of CREDAI Pune, actively shaping city planning policies and elevating industry standards region-wide.</p>
-      </div>
+            <div class="social-links">
+                
+                    
+                
+                
+             
+                <a href="https://pharandespaces.com/" target="_blank">
+                    <img src="https://img.icons8.com/?size=50&id=DuuipuI9mFC8&format=gif" alt="Pharande spaces website">
+                </a>
+                
+               
+                <a href="https://in.linkedin.com/in/anil-pharande" target="_blank">
+                    <img src="https://img.icons8.com/?size=24&id=Uj9DyJeLazL6&format=gif" alt="Anil pharande LinkedIn">
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
-
-<!-- JOURNEY -->
-<section class="journey-section" id="journey">
-  <p class="section-tag">Journey</p>
-  <h2 class="section-title">Three Decades of<br><span>Vision &amp; Growth</span></h2>
-  <div class="section-divider"></div>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <p class="timeline-year">1994 — The Beginning</p>
-      <h3 class="timeline-title">Founding of Pharande Spaces</h3>
-      <p class="timeline-text">Starting with limited resources, strong goodwill, and financial support, Anil Pharande laid the foundation of Pharande Spaces with a long-term vision for growth and excellence in residential development.</p>
-    </div>
-    <div class="timeline-item">
-      <p class="timeline-year">Early Years</p>
-      <h3 class="timeline-title">Small Residential Buildings</h3>
-      <p class="timeline-text">The company began with small residential projects, steadily earning customer trust through consistent quality, honest dealings, and attention to detail on every build.</p>
-    </div>
-    <div class="timeline-item">
-      <p class="timeline-year">Growth Phase</p>
-      <h3 class="timeline-title">Expansion into Bungalows & Towers</h3>
-      <p class="timeline-text">Success led to expansion into bungalows, residential towers, and premium apartments across key locations including Punawale, Ravet, Moshi, Spine Road, Pradhikaran, and Urse.</p>
-    </div>
-    <div class="timeline-item">
-      <p class="timeline-year">Maturity Phase</p>
-      <h3 class="timeline-title">Integrated Townships & Luxury Villas</h3>
-      <p class="timeline-text">Pharande Spaces evolved into developing large-scale townships, luxury villas, and integrated communities designed around quality living, modern infrastructure, and lifestyle convenience.</p>
-    </div>
-    <div class="timeline-item">
-      <p class="timeline-year">Today</p>
-      <h3 class="timeline-title">Trusted Developer, Pune & PCMC</h3>
-      <p class="timeline-text">Today, the company stands among Pune's most trusted real estate developers — with millions of square feet delivered, a strong reputation for timely delivery, and communities built for the future.</p>
-    </div>
-  </div>
-</section>
-
-<!-- LEADERSHIP -->
-<section class="section leadership-section" id="leadership">
-  <p class="section-tag">Leadership</p>
-  <h2 class="section-title">Philosophy That<br><span>Shapes Communities</span></h2>
-  <div class="section-divider"></div>
-
-  <div class="leadership-grid">
-    <div class="leadership-card">
-      <div class="lc-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-        </svg>
-      </div>
-      <h3>Visionary Planning</h3>
-      <p>Long-term urban thinking that looks beyond individual projects toward the impact on neighborhoods, infrastructure, and the city's future shape.</p>
-    </div>
-    <div class="leadership-card">
-      <div class="lc-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
-          <rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>
-        </svg>
-      </div>
-      <h3>Quality Standards</h3>
-      <p>Technical knowledge and hands-on construction expertise ensure that quality standards are upheld across every Pharande Spaces development.</p>
-    </div>
-    <div class="leadership-card">
-      <div class="lc-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-          <circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-        </svg>
-      </div>
-      <h3>Customer-Centric</h3>
-      <p>Every project is conceived with the end customer in mind — their lifestyle, aspirations, and long-term comfort driving design and planning decisions.</p>
-    </div>
-    <div class="leadership-card">
-      <div class="lc-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M12 6v6l4 2"/>
-        </svg>
-      </div>
-      <h3>Timely Delivery</h3>
-      <p>A commitment to honoring timelines has been a defining hallmark, building credibility and trust with thousands of homeowners over three decades.</p>
-    </div>
-    <div class="leadership-card">
-      <div class="lc-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-      </div>
-      <h3>Transparency</h3>
-      <p>Open, honest dealings with customers, partners, and regulators have formed the foundation of Pharande Spaces' enduring reputation in the market.</p>
-    </div>
-    <div class="leadership-card">
-      <div class="lc-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-      </div>
-      <h3>Green Infrastructure</h3>
-      <p>Strong belief in sustainable development — integrating open spaces, green surroundings, and eco-conscious planning into every modern community.</p>
-    </div>
-  </div>
-</section>
-
-<!-- INSIGHTS -->
-<section class="insights-section" id="insights">
-  <p class="section-tag">Market Insights</p>
-  <h2 class="section-title">Pune's Real Estate<br><span>Future is Bright</span></h2>
-  <div class="section-divider"></div>
-
-  <div class="insights-grid">
-    <div class="insight-quote">
-      The future of Pune &amp; PCMC real estate is strongly connected to infrastructure growth, connectivity, and lifestyle-focused developments.
-    </div>
-    <div class="insight-points">
-      <div class="insight-point">
-        <div class="ip-dot"></div>
-        <p>Areas with better transportation networks, commercial expansion, and integrated urban planning will see strong and sustained real estate demand.</p>
-      </div>
-      <div class="insight-point">
-        <div class="ip-dot"></div>
-        <p>Modern homebuyers seek convenience, connectivity, security, green surroundings, and lifestyle amenities — not just four walls and a roof.</p>
-      </div>
-      <div class="insight-point">
-        <div class="ip-dot"></div>
-        <p>Sustainable growth and long-term value creation remain essential pillars for building customer trust across generations of homeowners.</p>
-      </div>
-      <div class="insight-point">
-        <div class="ip-dot"></div>
-        <p>With metro connectivity, rapid urbanization, and infrastructure investment, Pune continues to emerge as one of India's most promising real estate destinations.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<div class="cta-band" id="contact">
-  <h2>Ready to Find Your Perfect Space in Pune &amp; PCMC?</h2>
-  <a href="https://pharandespaces.com" class="btn-white">Explore Pharande Spaces →</a>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      Anil <span>Pharande</span>
-      <p>Founder, Pharande Spaces. Building quality communities across Pune &amp; PCMC since 1994.</p>
-    </div>
-    <div class="footer-links">
-      <div class="footer-col">
-        <h5>Navigate</h5>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#journey">Journey</a></li>
-          <li><a href="#leadership">Leadership</a></li>
-          <li><a href="#insights">Insights</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Projects</h5>
-        <ul>
-          <li><a href="#">Punawale</a></li>
-          <li><a href="#">Ravet</a></li>
-          <li><a href="#">Moshi</a></li>
-          <li><a href="#">Pradhikaran</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Connect</h5>
-        <ul>
-          <li><a href="#">Pharande Spaces</a></li>
-          <li><a href="#">CREDAI Pune</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Anil Pharande. Pharande Spaces Pvt. Ltd. All rights reserved.</p>
-    <span class="credai-badge">CREDAI — Ex-President, Pune</span>
-  </div>
-</footer>
-
 </body>
 </html>
+
